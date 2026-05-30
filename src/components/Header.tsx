@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { Modal } from './Modal';
-import { Phone, Menu, X, Droplets, Sun, Moon } from 'lucide-react';
+import { Phone, Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Logo } from './Logo';
 
 const NAV = [
   { to: '/', label: 'Главная' },
@@ -45,9 +46,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-teal-600 text-white rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:shadow-emerald-500/50 transition-shadow">
-                <Droplets className="w-6 h-6" />
-              </div>
+              <Logo className="w-10 h-10 group-hover:scale-105 transition-transform" />
               <div>
                 <span
                   className={`font-bold text-xl tracking-tight block leading-none transition-colors ${

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Droplets, Phone, MessageCircle, MapPin } from 'lucide-react';
+import { Phone, MessageCircle, MapPin } from 'lucide-react';
+import { Logo } from './Logo';
 
 const PHONE = '+7 (985) 960-97-98';
 const PHONE_LINK = 'tel:+79859609798';
@@ -12,10 +13,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
-            <Link to="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-teal-600 text-white rounded-xl flex items-center justify-center">
-                <Droplets className="w-6 h-6" />
-              </div>
+            <Link to="/" className="flex items-center gap-3 mb-4 group">
+              <Logo className="w-10 h-10" />
               <span className="font-bold text-xl leading-none">Септик-Сервис</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
